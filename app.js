@@ -34,7 +34,7 @@ function main (opcion_Jugador, opcion_Computadora){
     console.log(opcion_Computadora)
     if(opcion_Jugador == 0){
         if(opcion_Computadora == 0){
-        alert('empate')
+        empate()
         } else if (opcion_Computadora == 1){
             perder()
         }else if(opcion_Computadora== 2){
@@ -42,6 +42,7 @@ function main (opcion_Jugador, opcion_Computadora){
         }
     } else if (opcion_Jugador == 1){
         if(opcion_Computadora == 1){
+            empate()
             } else if (opcion_Computadora == 2){
                 perder()
             }else if(opcion_Computadora== 0){
@@ -49,6 +50,7 @@ function main (opcion_Jugador, opcion_Computadora){
             }
     } else if(opcion_Jugador == 2){
         if(opcion_Computadora == 2){
+            empate()
             } else if (opcion_Computadora == 0){
                 perder()
             }else if(opcion_Computadora== 1){
