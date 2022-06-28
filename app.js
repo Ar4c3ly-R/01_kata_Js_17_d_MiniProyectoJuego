@@ -1,9 +1,10 @@
 let marcadorhumano = 0; 
 let marcadorPc = 0;
 let opcionJugador
+let opcionComputadora = document.getElementById('opcion-cpu');
 let jugador1_p1 = document.getElementById('jugador1');
 let jugador2_p2 = document.getElementById('jugador2');
-
+let imagenes = ["./imagenes/piedra.jpeg", "./imagenes/papel.jpeg", "./imagenes/tijeras.jpeg"];
 
 //Convierte la opcion en número
 function seleccionar(opcion){
@@ -25,7 +26,20 @@ function movComp (opcion){
     let randomComputadora = Math.floor (Math.random() *3 );
     let movida = opciones[randomComputadora];
     //definir que imagen corresponde de acuerdo al resultado random
+    agregarImagen(randomComputadora);
     main(opcion, randomComputadora);
+}
+
+function agregarImagen(opcion_Computadora){
+    let imagen = document.getElementById('opcion-cpu')
+    if(opcion_Computadora == 0){
+        imagen.src = imagenes[0];
+        //cionComputadora.appendChild(imagen);
+    }else if (opcion_Computadora == 1){
+        imagen.src = imagenes[1];
+    }else if(opcion_Computadora == 2){
+    imagen.src = imagenes[2];
+    }
 }
 
 //Comparación de resultados y condicionales.
